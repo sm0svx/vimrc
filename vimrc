@@ -36,11 +36,18 @@ if has('mouse')
   set mouse=a
 endif
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
+" Only do this when running in gvim or a color terminal
 if &t_Co > 2 || has("gui_running")
+" Switch syntax highlighting on, when the terminal has colors
   syntax on
+  " Switch on highlighting the last used search pattern.
   set hlsearch
+endif
+
+" Only do this when running in gvim
+if has("gui_running")
+  " Highlight the current cursor line
+  set cursorline
 endif
 
 " Only do this part when compiled with support for autocommands.
@@ -210,6 +217,3 @@ nmap <A-Up> V[egv
 nmap <A-Down> V]egv
 vmap <A-Up> [egv
 vmap <A-Down> ]egv
-
-" Highlight the current cursor line
-set cursorline
