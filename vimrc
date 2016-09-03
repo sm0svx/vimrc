@@ -221,3 +221,16 @@ nmap <A-Up> V[egv
 nmap <A-Down> V]egv
 vmap <A-Up> [egv
 vmap <A-Down> ]egv
+
+" Set up Gundo configuration variables
+let g:gundo_width = 30
+let g:gundo_preview_height = 15
+let g:gundo_preview_bottom = 1
+let g:gundo_right = 0
+let g:gundo_help = 1
+let g:gundo_disable = 0
+let g:gundo_close_on_revert = 0
+let g:gundo_auto_preview = 1
+let g:gundo_return_on_revert = 1
+" Toggle Gundo view using F5
+nnoremap <F5> :GundoToggle<CR>
