@@ -45,7 +45,6 @@ endif
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
-
   " Enable file type detection.
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
   " 'cindent' is on in C files, etc.
@@ -83,6 +82,9 @@ if has("autocmd")
   autocmd QuickFixCmdPost    l* nested lwindow
 
   autocmd FileType go :call GoSetup()
+
+  " Reread the .vimrc file whenever it is saved
+  autocmd BufWritePost .vimrc source $MYVIMRC
 else
 
   set autoindent		" always set autoindenting on
@@ -130,6 +132,16 @@ colorscheme desert
 highlight NonText guibg=gray20
 highlight LineNr guifg=lightblue guibg=#444444
 highlight CursorLineNr guifg=lightblue guibg=#444444 term=bold
+
+" Show syntax highlighting groups for word under cursor when Ctrl-Shift-P
+" is pressed
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
 
 " Set sensible tab completion
 set wildmode=longest,list,full
