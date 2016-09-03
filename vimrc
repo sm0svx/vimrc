@@ -7,6 +7,10 @@ endif
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" To disable a pathogen plugin, add it's bundle name to the following list
+" e.g. call add(g:pathogen_disabled, 'unimpaired')
+let g:pathogen_disabled = []
+
 " Load pathogen
 execute pathogen#infect()
 
