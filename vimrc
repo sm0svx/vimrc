@@ -130,8 +130,9 @@ map <C-S-RIGHT> :+tabmove<CR>
 " Load a nice colorscheme and modify it slightly
 colorscheme desert
 highlight NonText guibg=gray20
-highlight LineNr guifg=lightblue guibg=#444444
-highlight CursorLineNr guifg=lightblue guibg=#444444 term=bold
+highlight LineNr guifg=lightblue guibg=gray25
+highlight CursorLineNr guifg=lightblue guibg=gray25 term=bold
+highlight CursorLine guibg=gray25
 
 " Show syntax highlighting groups for word under cursor when Ctrl-Shift-P
 " is pressed
