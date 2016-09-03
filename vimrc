@@ -203,3 +203,12 @@ set showbreak=…
 
 " Show relative line numbering
 set relativenumber
+
+" Bubble single/multiple lines up or down
+nmap <A-Up> V[egv
+nmap <A-Down> V]egv
+vmap <A-Up> [egv
+vmap <A-Down> ]egv
+
+" Highlight the current cursor line
+set cursorline
