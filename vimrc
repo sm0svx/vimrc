@@ -84,7 +84,7 @@ if has("autocmd")
   autocmd FileType go :call GoSetup()
 
   " Reread the .vimrc file whenever it is saved
-  autocmd BufWritePost .vimrc source $MYVIMRC
+  "autocmd BufWritePost .vimrc source $MYVIMRC
 else
 
   set autoindent		" always set autoindenting on
