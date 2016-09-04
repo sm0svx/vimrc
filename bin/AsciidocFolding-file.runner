@@ -1,0 +1,6 @@
+#!/bin/bash
+
+vim --cmd 'profile start AsciidocFolding-file.result' \
+    --cmd 'profile! file *asciidoc/folding.vim' \
+    -c 'profdel file *asciidoc/folding.vim' \
+    "$1"
