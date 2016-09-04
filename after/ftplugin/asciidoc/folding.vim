@@ -70,6 +70,9 @@ function! AsciidocFoldText()
 endfunction
 setlocal foldtext=AsciidocFoldText()
 
+" Start with toplevel open
+setlocal foldlevel=1
+
 " Clean up when the filetype is changed
 let b:undo_ftplugin = '
   \ | setlocal foldmethod< foldtext< foldexpr<
