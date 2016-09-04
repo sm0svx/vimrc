@@ -216,6 +216,9 @@ set showbreak=…
 " Show relative line numbering
 set relativenumber
 
+" Allow switching from a buffer even if there are unsaved data
+set hidden
+
 " Bubble single/multiple lines up or down
 nmap <A-Up> V[egv
 nmap <A-Down> V]egv
