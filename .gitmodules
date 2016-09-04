@@ -28,8 +28,8 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular
-[submodule "/home/blomman/.vim/bundle/gundo"]
-	path = /home/blomman/.vim/bundle/gundo
+[submodule "bundle/gundo"]
+	path = bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
 [submodule "bundle/visual-star-search"]
 	path = bundle/visual-star-search
