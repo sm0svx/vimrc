@@ -70,4 +70,10 @@ function! AsciidocFoldText()
 endfunction
 setlocal foldtext=AsciidocFoldText()
 
+" Clean up when the filetype is changed
+let b:undo_ftplugin = '
+  \ | setlocal foldmethod< foldtext< foldexpr<
+  \ | unlet s:syntaxGroupCache
+  \ '
+
 " vim:set fdm=marker:
