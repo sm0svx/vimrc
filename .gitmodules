@@ -31,3 +31,6 @@
 [submodule "/home/blomman/.vim/bundle/gundo"]
 	path = /home/blomman/.vim/bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
+[submodule "bundle/visual-star-search"]
+	path = bundle/visual-star-search
+	url = https://github.com/bronson/vim-visual-star-search.git
