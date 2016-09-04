@@ -164,15 +164,17 @@ nnoremap <silent> <M-F12> :BufExplorer<CR>
 nnoremap <silent> <F12> :bn<CR>
 nnoremap <silent> <S-F12> :bp<CR>
 
+" By default put copied text into the desktop clipboard.
+if has("unnamedplus")
+  set clipboard=unnamedplus
+endif
+
 " Do some special settings if using gvim
 if has("gui_running")
   " Force window size to 80x35 characters.
   set columns=85
   set lines=35
   
-  " By default put copied text into the desktop clipboard.
-  set clipboard=unnamedplus
-
   " Set up a good programming font
   " set guifont=DejaVu\ Sans\ Mono\ 11
   set guifont=inconsolata\ 15
