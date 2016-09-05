@@ -10,6 +10,7 @@ set nocompatible
 " To disable a pathogen plugin, add it's bundle name to the following list
 " e.g. call add(g:pathogen_disabled, 'unimpaired')
 let g:pathogen_disabled = []
+call add(g:pathogen_disabled, 'snipMate')
 
 " Load pathogen
 execute pathogen#infect()
@@ -239,3 +240,12 @@ let g:gundo_auto_preview = 1
 let g:gundo_return_on_revert = 1
 " Toggle Gundo view using F5
 nnoremap <F5> :GundoToggle<CR>
+
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
