@@ -43,7 +43,7 @@ endif
 
 " Only do this when running in gvim or a color terminal
 if &t_Co > 2 || has("gui_running")
-" Switch syntax highlighting on, when the terminal has colors
+  " Switch syntax highlighting on, when the terminal has colors
   syntax on
   " Switch on highlighting the last used search pattern.
   set hlsearch
@@ -126,6 +126,7 @@ set softtabstop=2
 " Recursively generate tags for a source tree using: ctags -R .
 set tags=./tags;
 
+" For snipMate
 let g:snippets_dir = "~/.vim/local.snippets,~/.vim/snippets"
 
 " Allow more than 10 tabs to be opened
@@ -222,7 +223,7 @@ set relativenumber
 " Allow switching from a buffer even if there are unsaved data
 set hidden
 
-" Bubble single/multiple lines up or down
+" Bubble single/multiple lines up or down (using the unimpaired plugin)
 nmap <A-Up> V[egv
 nmap <A-Down> V]egv
 vmap <A-Up> [egv
@@ -241,8 +242,7 @@ let g:gundo_return_on_revert = 1
 " Toggle Gundo view using F5
 nnoremap <F5> :GundoToggle<CR>
 
-" Trigger configuration. Do not use <tab> if you use
-" https://github.com/Valloric/YouCompleteMe.
+" UltiSnips trigger configuration
 let g:UltiSnipsExpandTrigger="<tab>"
 "let g:UltiSnipsJumpForwardTrigger="<c-b>"
 "let g:UltiSnipsJumpBackwardTrigger="<c-z>"
