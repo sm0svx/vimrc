@@ -1,6 +1,6 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
-	url = http://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -30,7 +30,7 @@
 	url = https://github.com/godlygeek/tabular
 [submodule "bundle/gundo"]
 	path = bundle/gundo
-	url = http://github.com/sjl/gundo.vim.git
+	url = https://github.com/sjl/gundo.vim.git
 [submodule "bundle/visual-star-search"]
 	path = bundle/visual-star-search
 	url = https://github.com/bronson/vim-visual-star-search.git
@@ -42,4 +42,4 @@
 	url = https://github.com/SirVer/ultisnips.git
 [submodule "bundle/snippets"]
 	path = bundle/snippets
-	url = git://github.com/honza/vim-snippets.git
+	url = https://github.com/honza/vim-snippets.git
