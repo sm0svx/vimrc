@@ -94,6 +94,7 @@ if has("autocmd")
   autocmd QuickFixCmdPost    l* nested lwindow
 
   autocmd FileType go :call GoSetup()
+  autocmd FileType go :call PythonSetup()
 
   " Reread the .vimrc file whenever it is saved
   "autocmd BufWritePost .vimrc source $MYVIMRC
@@ -104,6 +105,12 @@ else
 endif " has("autocmd")
 
 fun! GoSetup()
+  set shiftwidth=4
+  set softtabstop=4
+  set tabstop=4
+endfun
+
+fun! PythonSetup()
   set shiftwidth=4
   set softtabstop=4
   set tabstop=4
