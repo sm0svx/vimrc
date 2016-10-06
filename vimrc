@@ -193,23 +193,16 @@ endif
 "   Indent comments one step
 set cino=/1s
 
-" Open manual page for word under cursor
-fun! ReadMan()
-  " Assign current word under cursor to a script variable:
-  let s:man_word = expand('<cword>')
-  " Open a new window:
-  :exe ":wincmd n"
-  " Read in the manpage for man_word (col -b is for formatting):
-  :exe ":r!man " . s:man_word . " | col -b"
-  " Goto first line...
-  :exe ":goto"
-  " and delete it:
-  :exe ":delete"
-  " finally set file type to 'man':
-  :exe ":set filetype=man"
-endfun
-" Map the K key to the ReadMan function:
-map K :call ReadMan()<CR>
+" Open manual page for word or visual selection under cursor.
+" In normal mode, the K command may be prefixed with the number
+" of the man section to search in.
+runtime ftplugin/man.vim
+nmap K :<C-U>exe ":Man " . v:count1 . " " . expand('<cword>')<CR>
+vmap K y:exe ':Man <C-r>"'<CR>
+for i in [0,1,2,3,4,5,6,7,8,9,'n']
+  :exe "vmap " . i . "K y:exe ':Man " . i . " <C-r>\"'<CR>"
+endfor
+"vmap nK y:exe ':Man n <C-r>"'<CR>
 
 " Use comma as leader key instead of backslash
 let mapleader=','
