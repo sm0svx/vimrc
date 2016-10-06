@@ -186,7 +186,8 @@ if has("gui_running")
   
   " Set up a good programming font
   " set guifont=DejaVu\ Sans\ Mono\ 11
-  set guifont=inconsolata\ 15
+  " set guifont=inconsolata\ 15
+  set guifont=Liberation\ Mono\ for\ Powerline\ 14
 endif
 
 " Set up cindent options
@@ -254,6 +255,4 @@ let g:UltiSnipsEditSplit="vertical"
 set laststatus=2
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_theme='bubblegum'
-if has("gui_running")
-  let g:airline_powerline_fonts = 1
-endif
+let g:airline_powerline_fonts = 1
