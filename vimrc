@@ -249,3 +249,11 @@ let g:UltiSnipsExpandTrigger="<tab>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" Vim-airline plugin configuration
+set laststatus=2
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline_theme='bubblegum'
+if has("gui_running")
+  let g:airline_powerline_fonts = 1
+endif
