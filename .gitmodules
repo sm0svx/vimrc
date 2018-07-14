@@ -52,3 +52,6 @@
 [submodule "bundle/commentary"]
 	path = bundle/commentary
 	url = https://tpope.io/vim/commentary.git
+[submodule "bundle/undotree"]
+	path = bundle/undotree
+	url = https://github.com/mbbill/undotree.git

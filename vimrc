@@ -12,6 +12,7 @@ set nocompatible
 let g:pathogen_disabled = []
 call add(g:pathogen_disabled, 'snipMate')
 call add(g:pathogen_disabled, 'clang_complete')
+call add(g:pathogen_disabled, 'gundo')
 
 " Load pathogen
 execute pathogen#infect()
@@ -147,7 +148,7 @@ let g:snippets_dir = "~/.vim/local.snippets,~/.vim/snippets"
 " Allow more than 10 tabs to be opened
 set tabpagemax=20
 
-" Switch tabs using Ctrl+LEFT and Ctrl+RIGHT
+" Switch tabs using Shift+LEFT and Shift+RIGHT
 map <S-LEFT> :tabprev<CR>
 map <S-RIGHT> :tabnext<CR>
 
@@ -240,17 +241,33 @@ vmap <A-Up> [egv
 vmap <A-Down> ]egv
 
 " Set up Gundo configuration variables
-let g:gundo_width = 30
-let g:gundo_preview_height = 15
-let g:gundo_preview_bottom = 1
-let g:gundo_right = 0
-let g:gundo_help = 1
-let g:gundo_disable = 0
-let g:gundo_close_on_revert = 0
-let g:gundo_auto_preview = 1
-let g:gundo_return_on_revert = 1
+" let g:gundo_width = 30
+" let g:gundo_preview_height = 15
+" let g:gundo_preview_bottom = 1
+" let g:gundo_right = 0
+" let g:gundo_help = 1
+" let g:gundo_disable = 1
+" let g:gundo_close_on_revert = 0
+" let g:gundo_auto_preview = 1
+" let g:gundo_return_on_revert = 1
 " Toggle Gundo view using F5
-nnoremap <F5> :GundoToggle<CR>
+" nnoremap <F5> :GundoToggle<CR>
+
+" Settings for the Undotree plugin
+let g:undotree_WindowLayout = 2
+let g:undotree_HelpLine = 0
+let g:undotree_DiffCommand = "diff -u"
+let g:undotree_DiffpanelHeight = 15
+let g:undotree_DiffAutoOpen = 1
+let g:undotree_SetFocusWhenToggle = 1
+let g:undotree_TreeNodeShape = '*'
+let g:undotree_RelativeTimestamp = 1
+let g:undotree_ShortIndicators = 1
+if has("persistent_undo")
+  set undodir=~/.vimundodir/
+  set undofile
+endif
+nnoremap <F5> :UndotreeToggle<CR>
 
 " UltiSnips trigger configuration
 let g:UltiSnipsExpandTrigger="<tab>"
