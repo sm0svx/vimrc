@@ -30,6 +30,9 @@ set listchars=tab:▸\ ,eol:¬,trail:·
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
 
+" Remove the toolbar in gvim
+set guioptions-=T
+
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
