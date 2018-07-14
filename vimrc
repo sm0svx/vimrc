@@ -11,6 +11,7 @@ set nocompatible
 " e.g. call add(g:pathogen_disabled, 'unimpaired')
 let g:pathogen_disabled = []
 call add(g:pathogen_disabled, 'snipMate')
+call add(g:pathogen_disabled, 'clang_complete')
 
 " Load pathogen
 execute pathogen#infect()
