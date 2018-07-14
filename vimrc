@@ -161,6 +161,7 @@ highlight NonText guibg=gray20
 highlight LineNr guifg=lightblue guibg=gray25
 highlight CursorLineNr guifg=lightblue guibg=gray25 term=bold
 highlight CursorLine guibg=gray25
+highlight CursorColumn guibg=gray25
 
 " Show syntax highlighting groups for word under cursor when Ctrl-Shift-P
 " is pressed
