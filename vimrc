@@ -148,13 +148,13 @@ let g:snippets_dir = "~/.vim/local.snippets,~/.vim/snippets"
 " Allow more than 10 tabs to be opened
 set tabpagemax=20
 
-" Switch tabs using Shift+LEFT and Shift+RIGHT
-map <S-LEFT> :tabprev<CR>
-map <S-RIGHT> :tabnext<CR>
+" Switch tabs using Shift+H and Shift+L
+nnoremap <S-H> :tabprev<CR>
+nnoremap <S-L> :tabnext<CR>
 
-" Move tabs using Ctrl+Shift+LEFT and Ctrl-Shift+RIGHT
-map <C-S-LEFT> :-tabmove<CR>
-map <C-S-RIGHT> :+tabmove<CR>
+" Move tabs using Ctrl+Shift+H and Ctrl-Shift+L
+map <C-S-H> :-tabmove<CR>
+map <C-S-L> :+tabmove<CR>
 
 " Load a nice colorscheme and modify it slightly
 colorscheme desert
