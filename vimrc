@@ -36,6 +36,10 @@ set guioptions-=T
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
+" Map 'ö' to ';' and 'Ö' to ',', search next/prev matching char
+nmap ö ;
+nmap Ö ,
+
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
@@ -209,8 +213,8 @@ for i in [0,1,2,3,4,5,6,7,8,9,'n']
 endfor
 "vmap nK y:exe ':Man n <C-r>"'<CR>
 
-" Use comma as leader key instead of backslash
-let mapleader=','
+" Use 'ä' as leader key instead of backslash
+let mapleader='ä'
 
 " Open file in the same directory as the current file
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
