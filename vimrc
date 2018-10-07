@@ -12,10 +12,10 @@ set nocompatible
 " To disable a pathogen plugin, add it's bundle name to the following list
 " e.g. call add(g:pathogen_disabled, 'unimpaired')
 let g:pathogen_disabled = []
-call add(g:pathogen_disabled, 'snipMate')
+"call add(g:pathogen_disabled, 'snipMate')
 "call add(g:pathogen_disabled, 'clang_complete')
-call add(g:pathogen_disabled, 'gundo')
-call add(g:pathogen_disabled, 'nerdtree')
+"call add(g:pathogen_disabled, 'gundo')
+"call add(g:pathogen_disabled, 'nerdtree')
 
 " Load pathogen
 execute pathogen#infect()

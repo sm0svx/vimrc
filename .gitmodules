@@ -1,18 +1,18 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
+#[submodule "bundle/nerdtree"]
+#	path = bundle/nerdtree
+#	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/go"]
 	path = bundle/go
 	url = https://github.com/fatih/vim-go.git
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = https://github.com/jlanzarotta/bufexplorer.git
-[submodule "bundle/snipMate"]
-	path = bundle/snipMate
-	url = https://github.com/sm0svx/snipMate.git
+#[submodule "bundle/snipMate"]
+#	path = bundle/snipMate
+#	url = https://github.com/sm0svx/snipMate.git
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
@@ -28,9 +28,9 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular
-[submodule "bundle/gundo"]
-	path = bundle/gundo
-	url = https://github.com/sjl/gundo.vim.git
+#[submodule "bundle/gundo"]
+#	path = bundle/gundo
+#	url = https://github.com/sjl/gundo.vim.git
 [submodule "bundle/visual-star-search"]
 	path = bundle/visual-star-search
 	url = https://github.com/bronson/vim-visual-star-search.git
