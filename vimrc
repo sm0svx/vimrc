@@ -295,6 +295,10 @@ nnoremap <F5> :UndotreeToggle<CR>
 
 " UltiSnips trigger configuration
 let g:UltiSnipsEditSplit="horizontal"
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsSnippetsDir = "~/.vim/local.snippets"
 
 " Vim-airline plugin configuration
 set laststatus=2
