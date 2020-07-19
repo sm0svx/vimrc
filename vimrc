@@ -12,10 +12,24 @@ set nocompatible
 " To disable a pathogen plugin, add it's bundle name to the following list
 " e.g. call add(g:pathogen_disabled, 'unimpaired')
 let g:pathogen_disabled = []
-"call add(g:pathogen_disabled, 'snipMate')
+"call add(g:pathogen_disabled, 'abolish')
+"call add(g:pathogen_disabled, 'ansible-vim')
+"call add(g:pathogen_disabled, 'bufexplorer')
 "call add(g:pathogen_disabled, 'clang_complete')
-"call add(g:pathogen_disabled, 'gundo')
-"call add(g:pathogen_disabled, 'nerdtree')
+"call add(g:pathogen_disabled, 'commentary')
+"call add(g:pathogen_disabled, 'fugitive')
+"call add(g:pathogen_disabled, 'go')
+"call add(g:pathogen_disabled, 'snippets')
+"call add(g:pathogen_disabled, 'supertab')
+"call add(g:pathogen_disabled, 'surround')
+"call add(g:pathogen_disabled, 'tabular')
+"call add(g:pathogen_disabled, 'ultisnips')
+"call add(g:pathogen_disabled, 'undotree')
+"call add(g:pathogen_disabled, 'unimpaired')
+"call add(g:pathogen_disabled, 'valgrind')
+"call add(g:pathogen_disabled, 'vim-airline')
+"call add(g:pathogen_disabled, 'vim-airline-themes')
+"call add(g:pathogen_disabled, 'visual-star-search')
 
 " Load pathogen
 execute pathogen#infect()
