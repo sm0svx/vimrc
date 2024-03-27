@@ -48,8 +48,9 @@ set showbreak=⤹
 set listchars=tab:⤑\ ,trail:·,extends:…,precedes:…,nbsp:␣
 set list
 
-" Remove the toolbar in gvim
+" Remove the toolbar and scrollbar in gvim
 set guioptions-=T
+set guioptions-=r
 
 " Remap the Q key from entering ex-mode into triggering text formatting
 map Q gq
@@ -107,7 +108,8 @@ if has("gui_running")
   " Set up a good programming font
   " set guifont=DejaVu\ Sans\ Mono\ 11
   " set guifont=inconsolata\ 15
-  set guifont=Liberation\ Mono\ for\ Powerline\ 14
+  " set guifont=Liberation\ Mono\ for\ Powerline\ 11
+  set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 11
 
   " Show syntax highlighting groups for word under cursor when Ctrl-Shift-P
   " is pressed
@@ -258,8 +260,14 @@ map <leader>j :cn<CR>
 " Toggle quickly between paste/nopaste
 set pastetoggle=<leader>p
 
-" Show relative line numbering
-set relativenumber
+" Show hybrid (relative and current absolute) line numbering when focused and
+" input mode is not 'insert'
+set number
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+augroup END
 
 " Allow switching from a buffer even if there are unsaved data
 set hidden
@@ -319,3 +327,6 @@ set laststatus=2
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_theme='bubblegum'
 let g:airline_powerline_fonts = 1
+
+" Netrw default directory browsing is tree view
+let g:netrw_liststyle = 3
