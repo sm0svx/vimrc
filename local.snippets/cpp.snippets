@@ -40,3 +40,8 @@ snippet fori
 	for (int ${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
 	  ${4:/* code */}
 	}
+snippet cppfun
+	${1:void} ${2:`Filename('$2', 'name')`}::${3:functionName}(${4:void})
+	{
+	  ${5:/* code */}
+	} /* $3 */
